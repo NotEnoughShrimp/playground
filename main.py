@@ -1,5 +1,5 @@
 class Stat_Block:
-    def __init__(self, strength = 8, dexterity = 8, constitution = 8, intelligence = 8, wisdom = 8, charisma = 8, level=None, name = None):
+    def __init__(self, strength = 10, dexterity = 10, constitution = 10, intelligence = 10, wisdom = 10, charisma = 10, level=None, name = None):
         self.strength = strength
         self.dexterity = dexterity
         self.constitution = constitution
@@ -69,7 +69,7 @@ class Stat_Block:
         return f"Strength: {self.strength}\nDexterity: {self.dexterity}\nConstitution: {self.constitution}\nIntelligence: {self.intelligence}\nWisdom: {self.wisdom}\nCharisma: {self.charisma}"
     
 class Player(Stat_Block):
-    def __init__(self, strength=8, dexterity=8, constitution=8, intelligence=8, wisdom=8, charisma=8, level=None, name=None, experience=0):
+    def __init__(self, strength=12, dexterity=12, constitution=10, intelligence=12, wisdom=12, charisma=12, level=None, name=None, experience=0):
         super().__init__(strength, dexterity, constitution,intelligence,wisdom,charisma,level,name)
         self.experience = experience
     
@@ -100,5 +100,5 @@ elif start  == "2":
 elif start == "3":
     start_experience = 0
 
-player = Player(strength=8, dexterity=8, constitution=8, intelligence=8, wisdom=8, charisma=8, level=1, name=name, experience=start_experience)
+player = Player(strength=12, dexterity=12, constitution=12, intelligence=12, wisdom=12, charisma=12, level=1, name=name, experience=start_experience)
 player.level_up()
