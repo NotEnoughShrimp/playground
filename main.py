@@ -65,6 +65,11 @@ class Stat_Block:
         initiative = initiative_roll+initiative_bonus
         return initiative
         
+    def armor_class(self):
+        self.apply_modifier
+        armor_class = 10 + self.dex_bonus
+        return armor_class
+        
     def __str__(self) -> str:
         return f"Strength: {self.strength}\nDexterity: {self.dexterity}\nConstitution: {self.constitution}\nIntelligence: {self.intelligence}\nWisdom: {self.wisdom}\nCharisma: {self.charisma}"
     
