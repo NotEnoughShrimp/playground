@@ -57,6 +57,14 @@ class Stat_Block:
             return 9
         elif stat_value == 30:
             return 10
+
+    def initiative(self):
+        initiative_roll = random.randint(1,20)
+        self.apply_modifier()
+        initiative_bonus = self.dex_bonus
+        initiative = initiative_roll+initiative_bonus
+        return initiative
+        
     def __str__(self) -> str:
         return f"Strength: {self.strength}\nDexterity: {self.dexterity}\nConstitution: {self.constitution}\nIntelligence: {self.intelligence}\nWisdom: {self.wisdom}\nCharisma: {self.charisma}"
     
