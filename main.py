@@ -25,38 +25,7 @@ class Stat_Block:
         self.char_bonus = self.mod_value(self.charisma)
         
     def mod_value(self, stat_value):
-        if stat_value == 1:
-            return -5
-        elif 2 <= stat_value <= 3:
-            return -4
-        elif 4 <= stat_value <= 5:
-            return -3
-        elif 6 <= stat_value <= 7:
-            return -2
-        elif 8 <= stat_value <= 9:
-            return -1
-        elif 10 <= stat_value <= 11:
-            return 0
-        elif 12 <= stat_value <= 13:
-            return 1
-        elif 14 <= stat_value <= 15:
-            return 2
-        elif 16 <= stat_value <= 17:
-            return 3
-        elif 18 <= stat_value <= 19:
-            return 4
-        elif 20 <= stat_value <= 21:
-            return 5
-        elif 22 <= stat_value <= 23:
-            return 6
-        elif 24 <= stat_value <= 25:
-            return 7
-        elif 26 <= stat_value <= 27:
-            return 8
-        elif 28 <= stat_value <= 29:
-            return 9
-        elif stat_value == 30:
-            return 10
+        return stat//2-5
 
     def initiative(self):
         initiative_roll = random.randint(1,20)
