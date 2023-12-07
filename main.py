@@ -1,3 +1,5 @@
+import random
+
 class Stat_Block:
     def __init__(self, strength = 10, dexterity = 10, constitution = 10, intelligence = 10, wisdom = 10, charisma = 10, level=None, name = None):
         self.strength = strength
@@ -25,7 +27,7 @@ class Stat_Block:
         self.char_bonus = self.mod_value(self.charisma)
         
     def mod_value(self, stat_value):
-        return stat//2-5
+        return stat_value//2-5
 
     def initiative(self):
         initiative_roll = random.randint(1,20)
