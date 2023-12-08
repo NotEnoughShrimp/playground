@@ -38,7 +38,7 @@ the formula goes: (level/x)^y
         higher = faster exp
 """
 
-""""""
+
 def level_requirements(retrieve_level_requirement=None):
     
     """ The empty level_table dictionary will be populated as this function executes"""
