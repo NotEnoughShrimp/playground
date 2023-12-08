@@ -34,12 +34,4 @@ a = Player("Hero", strength=10, dexterity=10, constitution=10)
 b = Monster("BingBong", strength=10,dexterity=10,constitution=10)
 c = Player("Sidekick", strength=16,dexterity=14,constitution=18)
 
-units = [a.core,b.monster_core,c.core]
-turn_order = []
-for unit in units:
-    initiative_value = unit.get_initiative()
-    turn_order.append(initiative_value)
-    turn_order.sort(reverse=True)
-
-print(turn_order)
 
