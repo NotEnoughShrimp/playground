@@ -115,6 +115,7 @@ class Weapon:
         return self.attack_value
     
 def placeholder():
+    """I'll use this once I figure out how to apply it, or just delete"""
     yellow_mega_phone = {
         "attack": 36,
         "magic attack": 8,
